@@ -31,6 +31,21 @@ class TestPlayer < Test::Unit::TestCase
         TicTacToePlayer.new.turn(emptyhash)
     end
   end
+
+  def test_turn_accept_2var_hash
+    secondhash = {:owned_by_x =>nil, :owned_by_zero => nil}
+    assert_nothing_raised(ArgumentError) do
+        TicTacToePlayer.new.turn(secondhash)
+    end
+  end
+
+  def test_turn_accept_hash_3
+    thirdhash = {:owned_by_x =>[], :owned_by_zero => []}
+    assert_nothing_raised(ArgumentError) do
+        TicTacToePlayer.new.turn(thirdhash)
+    end
+  end
+
 end
 
 
