@@ -14,7 +14,10 @@ class TicTacToePlayer
       if(!move.instance_of? Hash)
           return 1;
       end 
-
+      
+      if(move.has_key?(:owned_by_x) && move.has_key?(:owned_by_zero))
+          return 2;
+      end
     end
 end
 
