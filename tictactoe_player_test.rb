@@ -10,7 +10,7 @@ class TicTacToePlayer
                                 [:a3, :b3, :c3],
                                 [:a1, :b2, :c3],
                                 [:c1, :b2, :a3]]
-    def turn()
+    def turn(move = {})
         
     end
 end
