@@ -11,7 +11,9 @@ class TicTacToePlayer
                                 [:a1, :b2, :c3],
                                 [:c1, :b2, :a3]]
     def turn(move = {})
-       
+      if(!move.instance_of? Hash)
+          return 1;
+      end 
     end
 end
 
