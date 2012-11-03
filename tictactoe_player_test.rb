@@ -22,7 +22,14 @@ class TestPlayer < Test::Unit::TestCase
   end
 
   def test_respond_turn
-	assert(TicTacToePlayer.new.respond_to?("turn"), failure_mess = "Doesn't respond to turn");
+	assert(TicTacToePlayer.new.respond_to?("turn"), failure_mess = "Doesn't respond to turn")
+  end
+
+  def test_turn_hash
+    emptyhash = {"a"=>1}
+    assert_nothing_raised(ArgumentError) do
+        TicTacToePlayer.new.turn(emptyhash)
+    end
   end
 end
 
