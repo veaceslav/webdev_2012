@@ -19,6 +19,10 @@ class TicTacToePlayer
           return nil;
       end
 
+      if((!move[:owned_by_x].instance_of? Array) && (!move[:owned_by_zero].instance_of? Array))
+          return nil;
+      end
+
       return 1;
     end
 end
