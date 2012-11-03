@@ -14,6 +14,7 @@ class TicTacToePlayer
       if(!move.instance_of? Hash)
           return 1;
       end 
+
     end
 end
 
@@ -46,6 +47,13 @@ class TestPlayer < Test::Unit::TestCase
         TicTacToePlayer.new.turn(thirdhash)
     end
   end
+   
+  def test_turn_return_not_nil
+    puts "Test 5"
+    thirdhash = {:owned_by_x =>[], :owned_by_zero => []}
+    assert(TicTacToePlayer.new.turn(thirdhash).equal?(2),err_mess = "Turn doesn't return 2 when given right input")
+  end
+
 
 end
 
